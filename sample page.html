@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Simple Page</title>
+<meta charset="utf-8">
+
+<style>
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: #e6a6a6;
+  padding: 20px;
+  text-align: center;
+}
+h2 {
+  color: white;
+}
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.column.side {
+  width: 45%;
+}
+
+.column.middle {
+  width: 50%;
+}
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+.item1 {
+  grid-area: myArea;
+}
+.item2 {
+    background-color: #2196F3;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 'myArea myArea myArea myArea myArea';
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Sample Page</h1>
+  <h2>with CSS Box model</h2>
+</div>
+
+<div class="column middle">
+    <h3>About Us</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+
+  <div class="column side">
+    <h3>Our Mission</h3>
+    <p>Sell shoes of the highest quality so every customer can find a pair of shoes they actually love to wear.</p>
+    <p>Provide educational services that allow all children to experience learning success and become life-long learners and contributing members of our community.</p>
+    <p>Grow market vegetables using organic, sustainable farming practices to give people safe and healthy food choices.</p>
+    
+  </div>
+</div>
+<h1>  --- </h1>
+<div class="grid-container">
+    <div class="item1">Popular Courses</div>
+    <div class="item2">The Web Developer</div>
+    <div class="item3">JavaScript Developer</div>  
+    <div class="item4">FrontEnd Developer</div>
+    <div class="item5">Modern Web Design</div>
+    <div class="item6">CSS Selector Staling</div>
+  </div>
+</body>
+</html>
